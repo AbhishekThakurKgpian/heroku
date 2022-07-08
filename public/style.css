@@ -1,0 +1,74 @@
+body{
+ background-color: bisque;
+
+}
+.container{
+    max-width: 90vw;
+    margin: auto;
+ background-color: rgba(255, 0, 0, 0.496);
+ min-height: 60vh;
+ border: 5px solid black;
+ border-radius: 2%;
+ overflow-y: auto;
+ margin-bottom: 23px;
+}
+.message{
+background-color: white;
+width: 24%;
+padding: 10px;
+margin: 17px 12px;
+border: 2px solid black;
+border-radius: 10px;
+}
+.left{
+ float: left;
+ clear: both;
+}
+.right{
+    float: right;
+    clear: both;
+}
+#send-container{
+    text-align: center;
+   width: 100%;
+   display: block;
+   margin: auto;
+   max-width: 985px;
+}
+#messageInput{
+    width: 92%;
+    border: 2px solid black;
+    border-radius: 6px;
+    height: 34px;
+}
+.btn{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 6px;
+    text-align: center;
+    text-decoration: none;
+  
+    font-size: 16px;
+    border-radius: 5%;
+    margin: 1px;
+}
+#Online{
+    display: block;
+    text-align: center;
+    margin: 2px 0;
+ 
+    
+}
+#audio{
+   margin: 2px auto;
+
+   border-radius: 5px;
+   padding: 5px;
+  
+width: fit-content;
+  background-size: contain;
+  background-repeat: no-repeat;
+   background-color: rgb(151, 9, 218);
+   cursor: pointer;
+}
