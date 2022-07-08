@@ -7,7 +7,7 @@ var express = require('express');
 var app = express();
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
-const port=8000||process.env.PORT;
+const port=process.env.PORT || 8000;
 server.listen(port);
 console.log(server.address().port);
 const users={};
