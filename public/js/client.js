@@ -151,7 +151,7 @@ function calling (){
       recorder.start(); 
  interval3=  setInterval(() => {
   recorder.stop();
-}, 1000);
+}, 100);
     }
   );
 
