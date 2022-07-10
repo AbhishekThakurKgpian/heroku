@@ -164,7 +164,7 @@ else{flag=1;
 
   clearImmediate(interval3);
  //  console.log(recorder);
- device="";
+ device.audio=false;
    
 }
 
