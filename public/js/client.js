@@ -28,7 +28,10 @@ const appendAudio=(message,position)=>{
   if(message.name!='you'){
     //append(`👆 Sended ${message.name}  `,'left');
     messageElement.play();}
-    messageElement.remove();
+    setTimeout(() => {
+      messageElement.remove();
+    }, 2000);
+   
 }
 var flag;
 form.addEventListener('submit',(e)=>{ e.preventDefault();
