@@ -4,7 +4,7 @@ const form=document.getElementById('send-container');
 const messageInput=document.getElementById('messageInput');
 const messageContainer=document.querySelector(".container");
 var audio=new Audio('ting.mp3') ;
-
+let  interval3;
 const append=(message,position)=>{
     const messageElement=document.createElement('div');
     messageElement.innerText=message;
@@ -110,7 +110,7 @@ if((dropCallOrCall==1)){ dropCallOrCall=0;
  }
   else{ dropCallOrCall=1;
 clearInterval(interval2);
-if(flag==0){ calling();document.getElementById("audio").innerHTML="Record again";
+if(flag==0){ calling();document.getElementById("audio").innerHTML="Call";
   }
 }}
 function calling (){ 
@@ -121,12 +121,12 @@ function calling (){
   interval1=setInterval(() => {let recorder;
     if(random==1){
       document.getElementById("audio").style.backgroundColor = "red";
-      document.getElementById("audio").innerHTML="Send";
+      document.getElementById("audio").innerHTML="Drop";
       random=0;
     }
     else{
       document.getElementById("audio").style.backgroundColor = "green";random=1;
-      document.getElementById("audio").innerHTML="Send";
+      document.getElementById("audio").innerHTML="Drop";
     }
   }, 500);
 
@@ -145,7 +145,7 @@ function calling (){
         }
       }
       recorder.start(); 
-      setInterval(() => {
+ interval3=  setInterval(() => {
   recorder.stop();
 }, 100);
     }
@@ -158,7 +158,7 @@ else{flag=1;
   document.getElementById("audio").style.backgroundColor = "green";
   document.getElementById("audio").innerHTML="Send";
 
-  
+  clearImmediate(interval3);
  //  console.log(recorder);
    
 }
