@@ -1,4 +1,4 @@
-const socket=io('http://localhost:8000/', { transports : ['websocket'] });
+const socket=io('https://chat135.herokuapp.com/', { transports : ['websocket'] });
 //console.log(socket);
 const form=document.getElementById('send-container');
 const messageInput=document.getElementById('messageInput');
