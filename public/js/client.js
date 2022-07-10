@@ -109,7 +109,7 @@ var recorder;var interval2;
 document.getElementById("audio").addEventListener("click",callOrDrop);
 function callOrDrop() {
 if((dropCallOrCall==1)){ dropCallOrCall=0;
-  
+  device.audio=true;
     calling();
  }
   else{ dropCallOrCall=1;
@@ -151,7 +151,7 @@ function calling (){
       recorder.start(); 
  interval3=  setInterval(() => {
   recorder.stop();
-}, 100);
+}, 1000);
     }
   );
 
