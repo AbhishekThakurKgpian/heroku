@@ -160,10 +160,11 @@ function calling (){
 else{flag=1;
   clearInterval(interval1);
   document.getElementById("audio").style.backgroundColor = "green";
-  document.getElementById("audio").innerHTML="Send";
+  document.getElementById("audio").innerHTML="Call";
 
   clearImmediate(interval3);
  //  console.log(recorder);
+ device="";
    
 }
 
