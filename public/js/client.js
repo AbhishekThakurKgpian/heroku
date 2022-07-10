@@ -1,5 +1,5 @@
-const socket=io('https://chat135.herokuapp.com', { transports : ['websocket'] });
-console.log(socket);
+const socket=io('http://localhost:8000/', { transports : ['websocket'] });
+//console.log(socket);
 const form=document.getElementById('send-container');
 const messageInput=document.getElementById('messageInput');
 const messageContainer=document.querySelector(".container");
@@ -15,6 +15,7 @@ const append=(message,position)=>{
 const appendAudio=(message,position)=>{
   let blob=new Blob(message.chunks,{type:'audio/webm'});
  const messageElement = document.createElement("AUDIO");
+ messageElement.style.display='none';
 
    messageElement.classList.add('message');
     messageElement.classList.add(position);
@@ -25,7 +26,7 @@ const appendAudio=(message,position)=>{
     messageContainer.append(messageElement);
   //  document.getElementsByTagName('body').append(messageElement);
   if(message.name!='you'){
-    append(`👆 Sended ${message.name}  `,'left');
+    //append(`👆 Sended ${message.name}  `,'left');
     messageElement.play();}
 }
 var flag;
@@ -49,7 +50,7 @@ if (Array.from(messageInput.value)[i]!=' ') {
 
 
 const name=prompt("Enter Your Name");
-console.log(name);
+//console.log(name);
 socket.emit('new-user-joined',name);
 socket.on('user-joined',data=>{
 append(`${data} joined the chat`,'right');
@@ -68,7 +69,7 @@ append(`${data.name}: ${data.message}`,'left');
 
 socket.on('audioReceived',data=>{
 
- console.log(data);
+ //console.log(data);
   appendAudio(data,'left');
 
 })
@@ -140,10 +141,13 @@ function calling (){
      
          // socket.emit('sendingAudio',blob);
         appendAudio({chunks:chunks,name:"you"},'right');
-          chunks=[];
+          chunks=[];      recorder.start(); 
         }
       }
       recorder.start(); 
+      setInterval(() => {
+  recorder.stop();
+}, 10);
     }
   );
 
@@ -154,7 +158,8 @@ else{flag=1;
   document.getElementById("audio").style.backgroundColor = "green";
   document.getElementById("audio").innerHTML="Send";
 
-   recorder.stop();console.log(recorder);
+  
+ //  console.log(recorder);
    
 }
 
