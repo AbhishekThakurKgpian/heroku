@@ -62,10 +62,16 @@ border-radius: 10px;
     margin: 1px;
 }
 #Online{
+    position: fixed;
     display: block;
+    font-weight: 900;
+    background-color: rgb(131 141 172);
+    padding: 2px;
+    border-radius: 2px;
     text-align: center;
     margin: 2px 0;
- 
+    margin: 4px 0;
+ left: 45vw;
     
 }
 #audio{
