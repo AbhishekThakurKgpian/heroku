@@ -31,10 +31,10 @@ socket.on('myIdIs1',id=>{
      // currentUserVideoRef.current.play();
 
      document.getElementById("muteSpeak").addEventListener('click',()=>{
-      if(temp==1){
-      mediaStream.getAudioTracks()[0].enabled=false;temp=0;}
+      if(mediaStream.getAudioTracks()[0].enabled==true){
+      mediaStream.getAudioTracks()[0].enabled=false;}
       else {
-        mediaStream.getAudioTracks()[0].enabled=true;temp=1;
+        mediaStream.getAudioTracks()[0].enabled=true;
       }
       })
  
@@ -60,10 +60,10 @@ getUserMedia({audio: true }, (mediaStream) => {
  // currentUserVideoRef.current.srcObject = mediaStream;
 //  currentUserVideoRef.current.play();
 document.getElementById("muteSpeak").addEventListener('click',()=>{
-  if(temp==1){
-  mediaStream.getAudioTracks()[0].enabled=false;temp=0;}
+  if(mediaStream.getAudioTracks()[0].enabled==true){
+  mediaStream.getAudioTracks()[0].enabled=false;}
   else {
-    mediaStream.getAudioTracks()[0].enabled=true;temp=1;
+    mediaStream.getAudioTracks()[0].enabled=true;
   }
   })
   call.answer(mediaStream);
