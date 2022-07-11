@@ -1,4 +1,4 @@
-const socket=io('http://localhost:8000/', { transports : ['websocket'] });
+const socket=io('https://chat135.herokuapp.com/', { transports : ['websocket'] });
 var temp=1;
 document.getElementById('microphone').addEventListener('click',()=>{
 if(((document.getElementById('microphone').src).toString()).includes("microphone-lines-solid.svg")) {
