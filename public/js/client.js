@@ -182,7 +182,7 @@ updateUser(userNo);
 // document.getElementById('Online').innerHTML=`${data+1} Users Online`;
 // })
 function updateUser(userNo) {
-  document.getElementById('Online').innerHTML=`${userNo+2} Users Online`;
+  document.getElementById('Online').innerHTML=`${userNo+2} Online`;
 }
 var dropCallOrCall=1;
 var flag=1;var random=1;var interval1;var device=navigator.mediaDevices.getUserMedia({audio:true});
