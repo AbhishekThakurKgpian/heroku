@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbhoKIovrhGrrTq7p_yBSk9tDamfrBCKxgpQ&usqp=CAU" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="https://chat135.herokuapp.com/socket.io/socket.io.js"></script>
+    <script  src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script defer src="./js/client.js"></script>
     <title>Chat Karo</title> <link rel="stylesheet" href="style.css">
-</head>
+</head><script  type="module" src="https://unpkg.com/peerjs@1.4.5/dist/peerjs.min.js"></script>
 <body> 
     <div id="Online">0 online except you</div>
     <div class="container">
@@ -15,9 +16,11 @@
 
     </div> 
 
-        <form action="#" id="send-container">    <div class="send"><div id="audio">
-           Call All
-        </div>
+        <form action="#" id="send-container">    <div class="send">
+           <div id="muteSpeak"><img id="microphone" class="animation" src="./microphone-lines-solid.svg" height="40px" alt="" srcset="">
+
+           </div>
+        
             <input type="text" name="messageInput" id="messageInput">
             <button class="btn" type="submit" >Send</button>
         </form>

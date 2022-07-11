@@ -2,6 +2,14 @@ body{
  background-color: bisque;
 
 }
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
 .container{
     max-width: 90vw;
     margin: auto;
@@ -72,3 +80,6 @@ width: fit-content;
    background-color: rgb(151, 9, 218);
    cursor: pointer;
 }
+.animation{
+    animation: rotation 2s infinite linear;
+  }

@@ -1,8 +1,3 @@
-
- 
-
-
-
 var express = require('express');
 var app = express();
 var server = require('http').createServer(app);
@@ -47,4 +42,7 @@ io.on('connection',socket=>{
         socket.broadcast.emit('ILeft');
         // socket.broadcast.emit('Online',users.length);
     });
+    socket.on('myIdIs',id=>{
+        socket.broadcast.emit('myIdIs1',id);
+    })
 })
