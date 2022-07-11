@@ -11,6 +11,7 @@ body{
     }
   }
 .container{
+ 
     max-width: 90vw;
     margin: auto;
  background-color: rgba(255, 0, 0, 0.496);
@@ -19,6 +20,7 @@ body{
  border-radius: 2%;
  overflow-y: auto;
  margin-bottom: 23px;
+ margin-top: 4vh;
 }
 .message{
 background-color: white;
@@ -69,8 +71,7 @@ border-radius: 10px;
     padding: 2px;
     border-radius: 2px;
     text-align: center;
-    margin: 2px 0;
-    margin: 4px 0;
+ top: 2px;
  left: 40vw;
     
 }
