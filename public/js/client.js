@@ -28,13 +28,13 @@ socket.on('myIdIs1',id=>{
     getUserMedia({ audio: true }, (mediaStream) => {
    
      // currentUserVideoRef.current.srcObject = mediaStream;
-     // currentUserVideoRef.current.play();
+     // currentUserVideoRef.current.play();''
 
-     document.getElementById("muteSpeak").addEventListener('click',()=>{
+     document.getElementById("microphone").addEventListener('click',()=>{
       if(mediaStream.getAudioTracks()[0].enabled==true){
-      mediaStream.getAudioTracks()[0].enabled=false;}
+      mediaStream.getAudioTracks()[0].enabled=false;temp=0;}
       else {
-        mediaStream.getAudioTracks()[0].enabled=true;
+        mediaStream.getAudioTracks()[0].enabled=true;temp=1;
       }
       })
  
@@ -59,11 +59,11 @@ var getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || nav
 getUserMedia({audio: true }, (mediaStream) => {
  // currentUserVideoRef.current.srcObject = mediaStream;
 //  currentUserVideoRef.current.play();
-document.getElementById("muteSpeak").addEventListener('click',()=>{
+document.getElementById("microphone").addEventListener('click',()=>{
   if(mediaStream.getAudioTracks()[0].enabled==true){
-  mediaStream.getAudioTracks()[0].enabled=false;}
+  mediaStream.getAudioTracks()[0].enabled=false;temp=0;}
   else {
-    mediaStream.getAudioTracks()[0].enabled=true;
+    mediaStream.getAudioTracks()[0].enabled=true;temp=1;
   }
   })
   call.answer(mediaStream);
